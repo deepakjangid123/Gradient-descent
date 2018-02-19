@@ -142,7 +142,7 @@ result
 
 (defn plot-data
   "Plots data"
-  [x y z]
+  [x y]
   (let [plot (charts/scatter-plot x y
                                   :x-label "Population of City in 10,000s"
                                   :y-label "Profit in $10,000s")]
