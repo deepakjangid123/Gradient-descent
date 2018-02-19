@@ -35,9 +35,6 @@
   [theta X]
   (matrix/mmul theta (matrix/transpose X)))
 
-;; ----------------------------------------------------------------------------
-;; If number-of-iterations is not given then look for local minima by
-;; minimizing cost at each step
 (defn mean-square-error
   "Returns mean-square-error for given `guess` matrix(h(x)) and
   `actual` matrix(y)"
@@ -52,7 +49,6 @@
   (let [predicted (hypothesis theta X)]
     (/ (mean-square-error predicted y)
        (* 2 number-of-examples))))
-;; ----------------------------------------------------------------------------
 
 (defn cost-derivative
   "Compute cost J(theta)'s derivative"
