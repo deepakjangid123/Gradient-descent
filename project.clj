@@ -5,8 +5,9 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [incanter "1.5.7"]
-                 [net.mikera/core.matrix "0.57.0"]
-                 [org.clojure/data.csv "0.1.3"]]
+                 [net.mikera/core.matrix "0.51.0"]
+                 [org.clojure/data.csv "0.1.3"]
+                 [net.mikera/vectorz-clj "0.47.0"]]
   :target-path "target/%s"
   :profiles {:dev {:dependencies [[lein-light-nrepl "0.3.3"]
                                   [enlive "1.1.6"]

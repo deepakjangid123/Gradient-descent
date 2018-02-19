@@ -82,6 +82,14 @@
              (conj costs (compute-cost X y theta))))))
 
 (def result (gradient-descent X y initial-theta alpha iterations))
+;; ---------------OR-------------------
+;; We can use normal equation[(inverse ((X-transpose).X)).(X-transpose).y]
+;; since we have less number of features here
+;; ------------------------------------
+(def result-by-norm-eqn
+  (matrix/mmul (matrix/inverse (matrix/mmul (matrix/transpose X) X))
+               (matrix/transpose X) y))
+
 (def cost-history (costs X y initial-theta alpha iterations))
 
 (defn plot-cost-history
